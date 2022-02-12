@@ -1,14 +1,15 @@
 package main
 
 import (
-	"github.com/kyokomi/emoji/v2"
 	"testing"
+
+	"github.com/kyokomi/emoji/v2"
 )
 
 func TestGetMessage(t *testing.T) {
-	exp := emoji.Sprint("Hello :world_map:")
+	exp := emoji.Sprint("Hello :world_map:!")
 	message := GetMessage()
-	if message != emoji.Sprint("Hello :world_map:") {
+	if message != emoji.Sprint("Hello :world_map:!") {
 		t.Errorf("Expected %v string, but got %v", exp, message)
 	}
 }
