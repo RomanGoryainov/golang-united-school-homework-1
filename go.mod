@@ -1,4 +1,4 @@
-module lecture0
+module github.com/RomanGoryainov/golang-united-school-homework-1
 
 go 1.17
 
