@@ -1,15 +1,14 @@
 package solution
 
 import (
-	"strings"
+	"github.com/kyokomi/emoji/v2"
 	"testing"
 )
 
 func TestGetMessage(t *testing.T) {
-	expected := string([]rune{72, 101, 108, 108, 111, 32, 128506, 65039, 32, 33})
-	msg := GetMessage()
-
-	if !strings.EqualFold(msg, expected) {
-		t.Errorf("Unexpected result:\n\tExpected: %q\n\tGot: %q", expected, msg)
+	exp := emoji.Sprint("Hello :world_map:!")
+	message := GetMessage()
+	if message != emoji.Sprint("Hello :world_map:!") {
+		t.Errorf("Expected:\n\t %q\n\t but got:\n\t %q", exp, message)
 	}
 }
